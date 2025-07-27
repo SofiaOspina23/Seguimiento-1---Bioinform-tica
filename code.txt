@@ -6,103 +6,81 @@ touch code.txt
 touch README.md
 nano code.txt
 
-#
+
 # Todo el punto 1 se escribio en el editor GNU nano, y a partir del punto 2 se escribio el texto desde comandos. 
-#
+
 #======================================================================
-#
+
 # 1.DESCRIPCION DEL ARCHIVO
-# 
+ 
 # Columna 1: seqid
-# Es el ID o el identificador que marca un feature en una secuencia,
-# es decir, indica el tipo de secuencia que se esta observando. Este
-# marcador debe coincidir con el ID en archivo fasta que siempre comienza
-# con ">".
-#
-# -> Ejemplo: chr (cromosoma completo) - ctg,contig,tig (secuencias 
-# ensambladas) - scaffold (union de tigs con huecos) - NC (cromosoma
-# humano)
+# Es el ID o el identificador que marca un feature en una secuencia, es decir, indica el tipo de secuencia que se esta observando. Este
+# marcador debe coincidir con el ID en archivo fasta que siempre comienza con ">".
+# -> Ejemplo: chr (cromosoma completo) - ctg,contig,tig (secuencias ensambladas) - scaffold (union de tigs con huecos) - NC (cromosoma humano)
+
 # Columna 2: source
-# Describe la fuente que origino el feature, lo que puede ser un software,
-# una base de datos o un proyecto. 
-# 
+# Describe la fuente que origino el feature, lo que puede ser un software, una base de datos o un proyecto. 
 # -> Ejemplo: GENSCAN o RefSeq
-#
+
 # Columna 3: type
-# En esta columna se escribe el tipo de feature o lo que describe que 
-# la secuencia que se esta observando, y debe ser
-# obligatoriamente un termino de la Sequence Ontology (SO), codigos 
-# identificadores de features. 
-#
+# En esta columna se escribe el tipo de feature o lo que describe que la secuencia que se esta observando, y debe serobligatoriamente un termino de la Sequence #Ontology (SO), codigos identificadores de features. 
 # -> Ejemplo: exon, gene, mRNA, CDS, start_codon, stop_codon
-#
+
 # Columna 4: start
-# Indica la coordenada inicial del feature, usando numeros enteros 
-# positivos.
-#
+# Indica la coordenada inicial del feature, usando numeros enteros positivos.
+
 # Columna 5: end
 # Indica la coordenada final del feature.
-#
+
 # Columna 6: score
-# Es un valor numerico en punto flotante que indica la calidad o
-# confianza de la secuencia. Puede identificarse E-value para similitudes
-# de secuencias y P-value para predicciones de genes. 
-# 
+# Es un valor numerico en punto flotante que indica la calidad o confianza de la secuencia. Puede identificarse E-value para similitudes de secuencias y P-value para predicciones de genes. 
+
 # Columna 7: strand
-# Indica en cual hebra del ADN se encuentra el feature, si en la directa
-# (+) o en la complementaria (-). Si no se sabe pero es relevante, se 
-# pone ?
-#
+# Indica en cual hebra del ADN se encuentra el feature, si en la directa (+) o en la complementaria (-). Si no se sabe pero es relevante, se pone "?"
+
 # Columna 8: phase
-# Indica en que base de un codon comienza el Coding DNA Sequence (CDS), 
-# ya que algunas veces la secuencia no inicia con un codon completo. De 
-# esta manera, se puede especificar en que base del codon inicia la nueva
-# secuencia. Se lee desde el extremo 5'.
+# Indica en que base de un codon comienza el Coding DNA Sequence (CDS), ya que algunas veces la secuencia no inicia con un codon completo. De esta manera, se #puede especificar en que base del codon inicia la nueva secuencia. Se lee desde el extremo 5'.
 #       0 -> primer nucelotido
 #       1 -> segundo nucleotido
 #       2 -> tercer nucleotido
-# 
+
 # Columna 9: attributes
-# Es una lista de pares tag=valor que describen detalles adicionales del 
-# feature. Cada par se separa con un punto y coma, y algunos caracteres
-# reservados deben ser codificados en escape, como el tab.
-# 
-# -> Ejemplo: ID=gene00001;Name=EDEN (ID es para features con hijos y
+# Es una lista de pares tag=valor que describen detalles adicionales del feature. Cada par se separa con un punto y coma, y algunos caracteres reservados deben # #ser codificados en escape, como el tab.
+#-> Ejemplo: ID=gene00001;Name=EDEN (ID es para features con hijos y
 # name es el nombre que se le muestra al usuario). Hay otros tipos de 
 # tags como Alias, Paremt, Gap, Note, Ontology Term (puede ser una 
 # referencia cruzada).
-#
+
 # -> EJEMPLO COMPLETO:
-# 
+
 # 1  ##sequence-region ctg123 1 1497228
 # 2  ctg123 . gene            1000  9000  .  +  .  ID=gene00001;Name=EDEN
 # 3  ctg123 . TF_binding_site 1000  1012  .  +  .  ID=tfbs00001;Parent=gene00001
 # 4  ctg123 . mRNA            1050  9000  .  +  .  ID=mRNA00001;Parent=gene00001;Name=EDEN.1
-# 
+ 
 # NOTA: para los campos indefinidos se pone "."
-#
+
 # ====================================================================
-#
-#
+
+
 # 2.Descarga de archivos de trabajo
-#
+
 wget https://ftp.ensembl.org/pub/current_gff3/papio_anubis/Papio_anubis.Panubis1.0.114.gff3.gz
-#
+
 # Descomprimir archivo 
 gunzip Papio_anubis.Panubis1.0.114.gff3.gz
-#
+
 #==================================================================
-#
+
 # 3.Analisis de archivo
-#
+
 # Punto a:Describir el organismo
-#
+
 cat <<EOF>> README.md
-#
 # Se procedio a escribir sobre el Papio Anubis 
-#
+
 # Punto b:
-#
+
 # Para encontrar cuantos y cuales son los features que contiene el archivo
 cat Papio_anubis.Panubis1.0.114.gff3 | cut -f 3 | grep -i '.' | sort | uniq | grep -v '#' | wc -l
 cat Papio_anubis.Panubis1.0.114.gff3 | cut -f 3 | grep -i . | sort | uniq | grep -v # | wc -l
