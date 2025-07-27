@@ -43,7 +43,7 @@ three_prime_UTR
 transcript
 
 ### ii. Cuantas regiones de la secuencia (cromosomas) contiene el archivo?
-El archivo contiene *11145* regiones de secuencias en total. Sin embargo,
+El archivo contiene **11145** regiones de secuencias en total. Sin embargo,
 no hay ningun cromosoma completamente ensamblado debido a que no existe
 un feature chromosome en el archivo, ni nigun seqid que comience con Chr.
 
@@ -58,7 +58,7 @@ pseudogene
 
 En cuanto a los genes que no tienen ninguna denominacion o categoria especial, se encuentran **21882** en total.
 
-### iv. Cual es el yop 10 de tipo features mas anotados en el genoma?
+### iv. Cual es el top 10 de tipo features mas anotados en el genoma?
 | Cantidad | Tipo de Feature        |
 |----------|------------------------|
 | 520490   | exon                   |
