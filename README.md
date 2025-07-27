@@ -2,17 +2,17 @@
 
 # PUNTO 3
 
-##Punto a:
-###Descripcion del organismo Papio Anubis 
+## Punto a:
+### Descripcion del organismo Papio Anubis 
 Tambien conocido como babuino oliva, es un primate oriundo del este de Etipia y Kenia. Su nombre es dado por el color oliva de su pelaje. Vive en grupos amplios de individuos donde se establecen jerarquias de dominancia, y requiere de ambientes donde se promueva la interaccion social y la estimulacion intelectual, comunmente un lugar donde puedan buscar y cosechar su comida.
 El babuino oliva es un modelo en la investigacion en reproduccion debido a que la implantacion y placentacion en ellos es similar a la de los humanos. 
  
-###Bibliografia
+### Bibliografia
 Colin, G. (2005). The Taxonomy of Primates in the Laboratory Context. En Elsevier eBooks (pp. 3-15). https://doi.org/10.1016/b978-012080261-6/50001-5
 
 
 
-##Punto b:
+## Punto b:
 
 ### i.Cuantos features contiene el archivo?
 
