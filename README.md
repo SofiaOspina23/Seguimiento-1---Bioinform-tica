@@ -1,1 +1,1 @@
-# Seguimiento-1---Bioinform-tica
+# Seguimiento-1 Bioinformatica
