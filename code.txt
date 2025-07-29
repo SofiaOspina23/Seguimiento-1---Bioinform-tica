@@ -6,7 +6,6 @@ touch code.txt
 touch README.md
 nano code.txt
 
-
 # Todo el punto 1 se escribio en el editor GNU nano, y a partir del punto 2 se escribio el texto desde comandos. 
 
 #======================================================================
@@ -62,11 +61,8 @@ nano code.txt
 
 # ====================================================================
 
-
 # 2.Descarga de archivos de trabajo
-
 wget https://ftp.ensembl.org/pub/current_gff3/papio_anubis/Papio_anubis.Panubis1.0.114.gff3.gz
-
 # Descomprimir archivo 
 gunzip Papio_anubis.Panubis1.0.114.gff3.gz
 
